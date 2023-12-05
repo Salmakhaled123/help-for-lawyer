@@ -4,3 +4,5 @@ part of 'lawyer_cubit.dart';
 abstract class LawyerState {}
 
 class LawyerInitial extends LawyerState {}
+
+class ChangeLanguageSuccessfully extends LawyerState {}
