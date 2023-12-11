@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../take_name_of_lawyer/presentation/view_model/lawyer_cubit.dart';
-import '../../../../take_name_of_lawyer/presentation/views/widgets/custom_radio_button.dart';
+import 'package:help_lawyer/cubits/lawyer_name/lawyer_cubit.dart';
+import 'package:help_lawyer/views/lawyer_name/custom_radio_button.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);

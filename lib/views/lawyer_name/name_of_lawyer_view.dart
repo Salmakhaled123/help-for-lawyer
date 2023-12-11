@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:help_lawyer/core/app_router.dart';
-import 'package:help_lawyer/features/take_name_of_lawyer/presentation/view_model/lawyer_cubit.dart';
-import 'package:help_lawyer/features/take_name_of_lawyer/presentation/views/widgets/custom_button.dart';
-import 'package:help_lawyer/features/take_name_of_lawyer/presentation/views/widgets/custom_text_form_field.dart';
+import 'package:help_lawyer/cubits/lawyer_name/lawyer_cubit.dart';
+import 'package:help_lawyer/views/lawyer_name/custom_button.dart';
+import 'package:help_lawyer/views/lawyer_name/custom_text_form_field.dart';
 
 class TakeNameOfLawyerView extends StatelessWidget {
   const TakeNameOfLawyerView({Key? key}) : super(key: key);
@@ -13,9 +13,10 @@ class TakeNameOfLawyerView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.purple,
+          backgroundColor: Colors.teal,
+          centerTitle: true,
           title: const Text(
-            'Lawyer Companion',
+            'Lawyer Companion',style: TextStyle(color: Colors.white),
           )),
       body: BlocBuilder<LawyerCubit, LawyerState>(
         builder: (context, state) {

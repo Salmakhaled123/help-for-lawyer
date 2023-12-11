@@ -6,20 +6,32 @@ class CustomButton extends StatelessWidget {
     Key? key,
     required this.text,
     required this.onPressed,
+    this.isLoading = false ,
   }) : super(key: key);
   final String text;
   final VoidCallback onPressed;
+  final bool isLoading ;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.3,
       child: ElevatedButton(
+
           onPressed: onPressed,
           style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16.r))),
-          child: Text(
+          child:
+          isLoading
+              ? const SizedBox(
+            height: 24,
+            width: 24,
+            child: CircularProgressIndicator(
+              color: Colors.white,
+            ),
+          )
+          : Text(
             text,
             style: TextStyle(fontSize: 21.sp),
           )),

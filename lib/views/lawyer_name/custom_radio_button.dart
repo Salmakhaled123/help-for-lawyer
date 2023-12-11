@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../view_model/lawyer_cubit.dart';
+import 'package:help_lawyer/cubits/lawyer_name/lawyer_cubit.dart';
 
 class CustomRadioButton extends StatelessWidget {
   const CustomRadioButton({
