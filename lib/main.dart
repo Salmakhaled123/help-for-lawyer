@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (_, child) {
           return MaterialApp.router(
-            theme: ThemeData(useMaterial3: false,primarySwatch: Colors.purple),
+            theme: ThemeData(useMaterial3: false,primarySwatch: Colors.deepPurple),
             routerConfig: AppRouter.router,
             debugShowCheckedModeBanner: false,
             title: 'Lawyer Companion',

@@ -64,7 +64,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 margin: EdgeInsets.only(right: 5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.teal,
+                  color: Colors.deepPurple,
                 ),
               )),
             ),

@@ -13,7 +13,7 @@ class TakeNameOfLawyerView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.deepPurple,
           centerTitle: true,
           title: const Text(
             'Lawyer Companion',style: TextStyle(color: Colors.white),

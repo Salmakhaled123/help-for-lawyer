@@ -22,7 +22,6 @@ class TaskItem extends StatelessWidget {
                 subtitle:  Text(task.discription,style: TextStyle(color: Colors.white),),
                 trailing: IconButton(onPressed: (){},color: Colors.white,icon: Icon(Icons.delete),),
               ),
-               Text(task.date,style: TextStyle(color: Colors.white),),
             ],
           ) ,
         ),

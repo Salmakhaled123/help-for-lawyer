@@ -83,6 +83,7 @@ class _AddTaskFormState extends State<AddTaskForm> {
                             date: formattedCurrentDate,
                           );
                           BlocProvider.of<HomeCubit>(context).addTask(taskModel);
+
                         } else {
                           autovalidateMode = AutovalidateMode.always;
                           setState(() {
@@ -99,21 +100,5 @@ class _AddTaskFormState extends State<AddTaskForm> {
       ),
 
     );
-  }
-  void chooseDateForToDo() async {
-    var choosenDate = await showDatePicker(
-      context: context,
-      initialDate: DateTime.now(),
-      firstDate: DateTime.now(),
-      lastDate: DateTime.now().add(
-        Duration(days: 365),
-      ),
-    );
-    setState(() {
-      date = choosenDate;
-      if (date != null) {
-        dateError = false;
-      }
-    });
   }
 }
