@@ -11,21 +11,19 @@ class HeaderCalender extends StatefulWidget {
 }
 
 class _HeaderCalenderState extends State<HeaderCalender> {
-
   DateTime _selectedDay = DateTime.now();
   DateTime _focusedDay = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
     return TableCalendar(
-
-      headerStyle: HeaderStyle(
+      headerStyle: const HeaderStyle(
         formatButtonVisible: false,
       ),
       weekendDays: [],
       focusedDay: DateTime.now(),
       firstDay: DateTime.now(),
-      lastDay: DateTime.now().add(Duration(days: 30)),
+      lastDay: DateTime.now().add(const Duration(days: 30)),
       calendarFormat: CalendarFormat.week,
       headerVisible: true,
       calendarStyle: CalendarStyle(
@@ -33,7 +31,7 @@ class _HeaderCalenderState extends State<HeaderCalender> {
           fontSize: 16,
           color: Colors.black,
         ),
-        selectedDecoration:  BoxDecoration(
+        selectedDecoration: BoxDecoration(
           color: Colors.grey,
           borderRadius: BorderRadius.circular(8),
         ),
@@ -53,7 +51,6 @@ class _HeaderCalenderState extends State<HeaderCalender> {
           borderRadius: BorderRadius.circular(8),
         ),
       ),
-
       selectedDayPredicate: (day) {
         return isSameDay(_selectedDay, day);
       },
@@ -64,10 +61,8 @@ class _HeaderCalenderState extends State<HeaderCalender> {
         });
       },
       onPageChanged: (focusedDay) {
-
         _focusedDay = focusedDay;
       },
-
     );
   }
 }

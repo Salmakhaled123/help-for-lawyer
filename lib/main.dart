@@ -11,11 +11,13 @@ import 'package:help_lawyer/cubits/task_cubit/task_cubit.dart';
 import 'package:help_lawyer/models/task_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-void main() async{
+void main() async {
   await Hive.initFlutter();
   Bloc.observer = SimpleBlocObserver();
   Hive.registerAdapter(TaskModelAdapter());
   await Hive.openBox<TaskModel>(kTasksBox);
+  await Hive.openBox<String>(nameBox);
+
   runApp(const MyApp());
 }
 
@@ -37,11 +39,11 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (_, child) {
           return MaterialApp.router(
-            theme: ThemeData(useMaterial3: false,primarySwatch: Colors.deepPurple),
+            theme: ThemeData(
+                useMaterial3: false, primarySwatch: Colors.deepPurple),
             routerConfig: AppRouter.router,
             debugShowCheckedModeBanner: false,
             title: 'Lawyer Companion',
-
           );
         },
       ),

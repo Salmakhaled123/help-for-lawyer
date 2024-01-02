@@ -9,7 +9,7 @@ part 'home_state.dart';
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
 
-  addTask(TaskModel task)async{
+  addTask(TaskModel task) async {
     emit(AddTaskLoading());
     try {
       var taskBox = Hive.box<TaskModel>(kTasksBox);
@@ -19,5 +19,4 @@ class HomeCubit extends Cubit<HomeState> {
       emit(AddTaskFailure(e.toString()));
     }
   }
-
 }
