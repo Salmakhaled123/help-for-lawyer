@@ -57,10 +57,6 @@ class TaskItem extends StatelessWidget {
                 ],
               ),
             ),
-            Text(
-              task.date,
-              style: const TextStyle(color: Colors.white),
-            ),
           ],
         ),
       ),

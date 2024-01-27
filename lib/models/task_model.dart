@@ -13,8 +13,10 @@ class TaskModel extends HiveObject {
 
 
   TaskModel(
-      {required this.title,
+      {
+        required this.title,
       required this.description,
       required this.date,
-       });
+       }
+       );
 }
